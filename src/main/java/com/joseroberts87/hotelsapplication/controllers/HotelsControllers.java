@@ -9,12 +9,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 
 @Controller
+@RequestMapping("hi")
 public class HotelsControllers {
 
     @RequestMapping(value = "")
     @ResponseBody
     public String hello() {
-        return "hellos";
+        return "helldos";
+    }
+
+    @RequestMapping(value = "hotels")
+    @ResponseBody
+    public String hotels(){
+        return "hotels";
     }
 
 }
