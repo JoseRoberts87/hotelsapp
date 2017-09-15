@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+
+<body class="container">
+
+<h1 th:text="${title}">Default Title</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+<p th:unless="${hotels} and ${hotels.description()}">no hotels found :(</p>
+
+<table class="table">
+
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Category</th>
+    </tr>
+
+    <tr th:each="hotel : ${hotels}">
+        <td th:text="${hotel.name}"></td>
+        <td th:text="${hotel.description}"></td>
+        <td th:text="${hotel.id.review}"></td>
+    </tr>
+
+</table>
+
+
+
+</body>
+</html>

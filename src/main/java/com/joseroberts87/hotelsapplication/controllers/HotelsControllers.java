@@ -10,13 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
-@RequestMapping("/hotels")
+@RequestMapping("hotels")
 public class HotelsControllers {
+    public float lng;
+    public float lat;
 
-    @RequestMapping(value = "", method = RequestMethod.GET)
-    @ResponseBody
-    public String allHotels() {
-        return "helldos";
+    @RequestMapping(value = "")
+    public String index() {
+        return "hotels/index";
     }
 
     @RequestMapping(value = "", method = RequestMethod.POST)
