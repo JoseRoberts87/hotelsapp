@@ -1,9 +1,11 @@
 package com.joseroberts87.hotelsapplication.controllers;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import com.joseroberts87.hotelsapplication.models.Hotels;
+import com.joseroberts87.hotelsapplication.models.data.HotelsRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * Created by rober on 9/14/2017.
@@ -12,13 +14,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("hotels")
 public class HotelsControllers {
+
+    @Autowired
+    private HotelsRepository repository;
+
     public float lng;
     public float lat;
 
     @RequestMapping(value = "")
-    public String index() {
-
-        return "hotels/index";
+    public List<Hotels> getHotels() {
+        System.out.println("this ran");
+        return repository.findAll();
     }
 
     @RequestMapping(value = "", method = RequestMethod.POST)
@@ -27,11 +33,16 @@ public class HotelsControllers {
         return "created hotel";
     }
 
-    @RequestMapping(value = "id", method = RequestMethod.GET)
-    @ResponseBody
-    public String hotelById(){
-        return "hotels by id";
+    @RequestMapping(value = "{name}", method = RequestMethod.GET)
+    public Hotels hotelByName(@PathVariable("name")String name){
+        return repository.findByName(name);
     }
+
+//    @RequestMapping(value = "{id}", method = RequestMethod.GET)
+//    public Hotels hotelById(@PathVariable("id")int id){
+//        System.out.println("getting id " + id );
+//        return repository.findById(id);
+//    }
 
 
 

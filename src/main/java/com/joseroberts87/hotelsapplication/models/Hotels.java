@@ -1,32 +1,54 @@
 package com.joseroberts87.hotelsapplication.models;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-import java.util.Date;
-
-import static javax.swing.text.StyleConstants.Size;
 
 /**
  * Created by rober on 9/14/2017.
  */
-@Document(collection = "hotels")
+//@Document(collection = "hotels")
 public class Hotels {
 
     @Id
-    private int id;
+    private String id;
 
     private String name;
 
-    private int rating;
-
-    private Date createdOn;
+    private String rating;
 
     public Hotels(){
-        this.
+        this.name = name;
+        this.rating = rating;
     }
 
+    public String getId() {
+        return id;
+    }
 
+    public void setId(String id) {
+        this.id = id;
+    }
 
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getRating() {
+        return rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
+    }
+//
+//    @Override
+//    public String toString(){
+//        return "Hotels{" +
+//                ", name ='" + name + '\'' +
+//                ", rating ='" + rating +
+//                '}';
+//    }
 }
