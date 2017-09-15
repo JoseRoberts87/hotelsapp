@@ -2,6 +2,7 @@ package com.joseroberts87.hotelsapplication.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 
 @Controller
-@RequestMapping("hi")
+@RequestMapping("/hotels")
 public class HotelsControllers {
 
     @RequestMapping(value = "")
@@ -18,7 +19,7 @@ public class HotelsControllers {
         return "helldos";
     }
 
-    @RequestMapping(value = "hotels")
+    @RequestMapping(value = "id", method = RequestMethod.GET)
     @ResponseBody
     public String hotels(){
         return "hotels";
