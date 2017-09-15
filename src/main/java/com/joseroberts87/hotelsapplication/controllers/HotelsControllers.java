@@ -17,6 +17,7 @@ public class HotelsControllers {
 
     @RequestMapping(value = "")
     public String index() {
+
         return "hotels/index";
     }
 
