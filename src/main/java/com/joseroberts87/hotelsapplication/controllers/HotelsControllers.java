@@ -13,16 +13,24 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/hotels")
 public class HotelsControllers {
 
-    @RequestMapping(value = "")
+    @RequestMapping(value = "", method = RequestMethod.GET)
     @ResponseBody
-    public String hello() {
+    public String allHotels() {
         return "helldos";
+    }
+
+    @RequestMapping(value = "", method = RequestMethod.POST)
+    @ResponseBody
+    public String createHotels(){
+        return "created hotel";
     }
 
     @RequestMapping(value = "id", method = RequestMethod.GET)
     @ResponseBody
-    public String hotels(){
-        return "hotels";
+    public String hotelById(){
+        return "hotels by id";
     }
+
+    
 
 }
