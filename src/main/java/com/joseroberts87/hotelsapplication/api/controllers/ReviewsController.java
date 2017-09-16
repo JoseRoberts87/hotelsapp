@@ -7,7 +7,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Created by rober on 9/14/2017.
- */
+ * ********************************
+ ********************************
+ ********************************
+ ********************************
+ ********************************
+ THIS FUNCTIONALITY HAS NOT BEEN
+ IMPLEMENTED. THIS CODE IS A PLACE
+ HOLDER */
 
 @RestController
 @RequestMapping(value = "hotels/id/reviews")

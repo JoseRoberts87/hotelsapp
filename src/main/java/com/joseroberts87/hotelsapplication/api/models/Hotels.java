@@ -5,7 +5,6 @@ import org.springframework.data.annotation.Id;
 /**
  * Created by rober on 9/14/2017.
  */
-//@Document(collection = "hotels")
 public class Hotels {
 
     @Id
@@ -13,11 +12,11 @@ public class Hotels {
 
     private String name;
 
-    private String rating;
+    private String stars;
 
     public Hotels(){
         this.name = name;
-        this.rating = rating;
+        this.stars = stars;
     }
 
     public String getId() {
@@ -37,11 +36,11 @@ public class Hotels {
     }
 
     public String getRating() {
-        return rating;
+        return stars;
     }
 
-    public void setRating(String rating) {
-        this.rating = rating;
+    public void setRating(String stars) {
+        this.stars = stars;
     }
 //
 //    @Override

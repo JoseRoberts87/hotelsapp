@@ -13,14 +13,13 @@
 
     <tr>
         <th>Name</th>
-        <th>Description</th>
-        <th>Category</th>
+        <th>Rating</th>
     </tr>
 
     <tr th:each="hotel : ${hotels}">
         <td th:text="${hotel.name}"></td>
-        <td th:text="${hotel.description}"></td>
-        <td th:text="${hotel.id.review}"></td>
+        <td th:text="${hotel.rating}"></td>
+
     </tr>
 
 </table>
