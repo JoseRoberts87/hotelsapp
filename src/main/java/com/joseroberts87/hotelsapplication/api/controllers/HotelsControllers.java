@@ -1,7 +1,7 @@
-package com.joseroberts87.hotelsapplication.controllers;
+package com.joseroberts87.hotelsapplication.api.controllers;
 
-import com.joseroberts87.hotelsapplication.models.Hotels;
-import com.joseroberts87.hotelsapplication.models.data.HotelsRepository;
+import com.joseroberts87.hotelsapplication.api.models.Hotels;
+import com.joseroberts87.hotelsapplication.api.models.data.HotelsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

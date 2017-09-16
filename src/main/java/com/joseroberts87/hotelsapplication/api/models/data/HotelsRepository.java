@@ -1,6 +1,6 @@
-package com.joseroberts87.hotelsapplication.models.data;
+package com.joseroberts87.hotelsapplication.api.models.data;
 
-import com.joseroberts87.hotelsapplication.models.Hotels;
+import com.joseroberts87.hotelsapplication.api.models.Hotels;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

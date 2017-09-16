@@ -1,4 +1,4 @@
-package com.joseroberts87.hotelsapplication.models;
+package com.joseroberts87.hotelsapplication.api.models;
 
 import org.springframework.data.annotation.Id;
 
